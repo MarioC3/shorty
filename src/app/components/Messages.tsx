@@ -6,9 +6,9 @@ interface Props {
 }
 export default function Messages({ state }: Props) {
 	const errorMessage = (
-		<div className="flex justify-center gap-2 font-semibold text-rose-600">
-			<OctagonX />
-			<span>{state.message}</span>
+		<div className="flex items-center justify-center gap-2 font-semibold text-rose-600">
+			<OctagonX size={20} />
+			<span className="text-sm">{state.message}</span>
 		</div>
 	)
 
