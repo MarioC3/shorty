@@ -15,9 +15,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${poppins.className} mx-auto flex h-screen w-full max-w-[500px] flex-col bg-slate-50 p-8 text-slate-700`}
+				className={`${poppins.className} mx-auto flex h-screen w-full max-w-[500px] flex-col bg-slate-50 p-4 text-slate-700 md:p-8`}
 			>
-				<div className="flex flex-1 flex-col items-center justify-center gap-20">
+				<div className="flex flex-1 flex-col items-center gap-12 pt-20 md:justify-center md:pt-0">
 					<header>
 						<h1 className="text-center text-4xl font-bold">Shorty</h1>
 						<h2>
@@ -30,7 +30,7 @@ export default function RootLayout({
 					</header>
 					<main className="w-full">{children}</main>
 				</div>
-				<footer className="flex flex-col pb-8 text-center text-sm">
+				<footer className="flex flex-col pb-0 text-center text-xs text-slate-500 md:pb-8">
 					<span>Leland&apos;s take-home excercise.</span>
 					<span>Made by Beto Carlos.</span>
 				</footer>
