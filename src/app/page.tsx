@@ -1,9 +1,25 @@
+'use client'
+
+import { useFormState } from 'react-dom'
+import { createShortUrl } from '@/actions'
 import SubmitButton from './components/SubmitButton'
+import Messages from './components/Messages'
+
+const initialState = {
+	message: '',
+	success: false,
+	submitted: false,
+}
 
 export default function Home() {
+	const [state, formAction] = useFormState(createShortUrl, initialState)
+
 	return (
 		<section className="space-y-8">
-			<form className="flex w-full flex-col items-center justify-center gap-4">
+			<form
+				action={formAction}
+				className="flex w-full flex-col items-center justify-center gap-4"
+			>
 				<label
 					htmlFor="urlInput"
 					className="w-full"
@@ -18,7 +34,7 @@ export default function Home() {
 					/>
 				</label>
 				<SubmitButton className="self-end">Shorten URL</SubmitButton>
-				<div className="h-10">Messages will go here</div>
+				<div className="h-10">{state.submitted && <Messages state={state} />}</div>
 			</form>
 		</section>
 	)
