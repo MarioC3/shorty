@@ -1,4 +1,4 @@
-# Leland's take-home assignment
+# Shorty - URL Shortener
 
 by Beto Carlos
 
@@ -46,12 +46,6 @@ pnpm install
 pnpm dev
 ```
 
-You'll need a `.env.local` to connect to the Redis database. Since I'm zipping this project and sending it like that, it should be on the project, but if it's not, you can create one and add this text to the file:
-
-```
-REDIS_URL=https://artistic-viper-26705.upstash.io
-REDIS_TOKEN=AWhRAAIjcDEyZmExZTUzYTQ4OTg0YmE4YjM2OGY0ZmRmNTIyZGNmZXAxMA
-```
 
 ## Testing
 
